@@ -224,12 +224,12 @@ fitted_pCFa = transpose(fitted_pCFa);
 % a one-term Gaussian model. We recommend using one Gaussian model, visualizing the fitting, 
 % and deciding if the data requires a two-term Gaussian model.
 
-fitted_pCF = GaussianPCF(avgData_S,corrBins);
+fitted_pCF = GaussianPCF(pCF_mean,corrBins);
 
 
 %% Step 15. Plot raw pCF and fitted data, get peak values
 
-peakTable = plotGaussian1(fitted_pCF,avgData_S,corrBins);
+peakTable = plotGaussian1(fitted_pCF,pCF_mean,corrBins);
 
 
 %% Step 16. Create a new table with the 'x_pk' values in a linear scale
