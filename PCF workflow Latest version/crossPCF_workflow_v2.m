@@ -227,7 +227,7 @@ fitted_pCF = GaussianPCF(pCF_mean,corrBins);
 
 %% Step 14. Plot raw pCF and fitted data, get peak values
 
-peakTable = plotGaussian(fitted_pCF,pCF_mean,corrBins);
+peakTable = plotGaussian1(fitted_pCF,pCF_mean,corrBins);
 
 
 %% Step 15. Create a new table with the 'x_pk' values in a linear scale
