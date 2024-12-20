@@ -229,7 +229,7 @@ fitted_pCF = GaussianPCF(avgData_S,corrBins);
 
 %% Step 15. Plot raw pCF and fitted data, get peak values
 
-peakTable = plotGaussian(fitted_pCF,avgData_S,corrBins);
+peakTable = plotGaussian1(fitted_pCF,avgData_S,corrBins);
 
 
 %% Step 16. Create a new table with the 'x_pk' values in a linear scale
@@ -315,6 +315,12 @@ for i = 1:numDatasets
     f = Adit_fvalues_pcf(:, i); 
     figure;  
     [y_pk, x_pk] = plotFittedCurves(corrBins, Adit_pCF(:, i), f);
+    
+    % Check if peaks were found
+    if isempty(x_pk) || isempty(y_pk)
+        x_pk = NaN;
+        y_pk = NaN;
+    end
     
     peakTable2 = [peakTable2; table(x_pk, y_pk)];
 end
