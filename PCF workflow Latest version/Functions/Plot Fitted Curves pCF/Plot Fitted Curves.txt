@@ -1,0 +1,7 @@
+1. Add code to the path
+   "plotFittedCurves_pCF8.m"
+   
+   As input data we need:
+   tdata=corrBins
+   ydata=pCF8 or pCFn
+   f=fitted curve
